@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eduford University</title>
+
+<style>
+/* ===== HEADER ===== */
+header{
+  width:100%;
+  height:100vh;
+  background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), 
+  url("https://uniofeduford.netlify.app/images/banner.png");
+  background-size:cover;
+  background-position:center;
+}
+
+/* NAVBAR */
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 80px;
+}
+
+nav img{
+  width:120px;
+}
+
+.nav-links{
+  display:flex;
+  gap:30px;
+}
+
+.nav-links a{
+  color:white;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:bold;
+}
+
+.nav-links a:hover{
+  border-bottom:2px solid red;
+}
+
+/* Mobile Menu Icon */
+.menu-icon{
+  display:none;
+  font-size:25px;
+  color:white;
+  cursor:pointer;
+}
+
+/* HERO TEXT */
+.hero{
+  text-align:center;
+  color:white;
+  margin-top:150px;
+  padding:0 20px;
+}
+
+.hero h1{
+            font-size:70px;
+            text-align: center;
+            font-style: bolder;
+            color: white;
+}
+
+.hero p{
+   text-align: center;
+            color: white;
+            font-size: 20px;
+            margin-left: 30px;
+            margin-right: 30px;
+            margin-top: 20px;
+            font-family: sans-serif;
+}
+
+.hero button{
+  padding:12px 30px;
+  background:none;
+  border:2px solid white;
+  color:white;
+  cursor:pointer;
+}
+
+.hero button:hover{
+   background-color: rgb(65, 131, 218);
+            border-style: none;
+}
+
+/* ===== SECTIONS ===== */
+section{
+  padding:80px 80px;
+}
+
+.title{
+  text-align:center;
+  font-size:35px;
+}
+
+.desc{
+  text-align:center;
+  color:gray;
+  margin:20px auto 50px;
+  max-width:800px;
+}
+
+/* COURSES */
+.course-box{
+  display:flex;
+  gap:30px;
+  justify-content:center;
+}
+
+.course{
+  background:#f8f0f6;
+  padding:30px;
+  border-radius:10px;
+  width:300px;
+  text-align:center;
+}
+
+.course:hover{
+  box-shadow:0 0 20px lightgray;
+  background:white;
+}
+
+/* CAMPUS */
+.campus-box{
+  display:flex;
+  gap:30px;
+  justify-content:center;
+}
+
+.campus-box img{
+  width:300px;
+  border-radius:10px;
+}
+
+/* FACILITIES */
+.facility-box{
+  display:flex;
+  gap:30px;
+  justify-content:center;
+}
+
+.facility{
+  width:300px;
+}
+
+.facility img{
+  width:100%;
+  border-radius:10px;
+}
+
+/* TESTIMONIAL */
+.test-box{
+  display:flex;
+  gap:30px;
+  justify-content:center;
+}
+
+.test{
+  background:#f8f0f6;
+  padding:20px;
+  display:flex;
+  gap:15px;
+  width:400px;
+  border-radius:10px;
+}
+
+.test img{
+  width:50px;
+  border-radius:50%;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:900px){
+  nav{
+    padding:20px;
+  }
+
+  .hero h1{
+    font-size:40px;
+  }
+
+  .course-box, .campus-box, .facility-box, .test-box{
+    flex-direction:column;
+    align-items:center;
+  }
+}
+
+@media(max-width:600px){
+  .nav-links{
+    position:absolute;
+    background:black;
+    top:70px;
+    right:0;
+    width:200px;
+    height:100vh;
+    flex-direction:column;
+    padding:30px;
+    display:none;
+  }
+
+  .menu-icon{
+    display:block;
+  }
+
+  section{
+    padding:50px 20px;
+  }
+
+  .hero h1{
+    font-size:28px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <img src="https://uniofeduford.netlify.app/images/logo.png">
+    <div class="nav-links" id="menu">
+      <a href="#">HOME</a>
+      <a href="#">ABOUT</a>
+      <a href="#">COURSE</a>
+      <a href="#">BLOG</a>
+      <a href="#">CONTACT</a>
+    </div>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  </nav>
+
+  <div class="hero">
+    <h1>World's Biggest University</h1>
+    <p>We’re a leading research university with a heart. Founded in the decade that the U.S. Constitution was signed, we’re the nation’s oldest Catholic and Jesuit university. Today we’re a forward-looking, diverse community devoted to social justice, restless inquiry and respect for each person’s individual needs and talents...</p><br><br>
+    <button>Visit Us To Know More</button>
+  </div>
+</header>
+
+<section>
+  <h2 class="title">Courses We Offer</h2><br>
+  <p class="desc">Explore technology, leadership, and research programs.</p>
+
+  <div class="course-box">
+    <div class="course"><h4>Under Graduate Programs</h4><br>
+            <p>For decades, Eduford College has improved the health of our communities, one graduate at a time. The JoAnn McGrath School of Nursing and Health Professions, as one of the largest nursing schools in Wisconsin, offers a wide array of fully accredited nursing programs, guaranteed clinical placements and a technology-rich Center for Clinical Education.</p>
+        </div>
+    <div class="course"><h4>Graduate Programs</h4><br>
+            <p>Building on our strong roots in leadership, health care and education, Eduford is proud to offer an array of coed graduate programs for women and men who are ready to advance their careers and grow as leaders. The Eduford College Community Psychology Master's program will help you to meet your goals of becoming a Licensed Professional Counselor</p>
+        </div>
+    <div class="course"><h4>Post Graduation</h4><br>
+            <p>The Eduford, as one of the largest nursing schools in Wisconsin, offers a wide array of fully accredited nursing programs, guaranteed clinical placements and a technology-rich Center for Clinical Education. The Eduford College Community Psychology Master's program will help you to meet your goals of becoming a Licensed Professional Counselor.</p>
+        </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="title">Our Global Campus</h2><br><br>
+  <p>The University of Hartford's main campus is located on Bloomfield Avenue. Surrounded by green space, the main campus is divided into residential and academic buildings connected by a bridge that overlooks the north branch of the Park River, known to us as Hog River.</p>
+    </p><br><br>
+  <div class="campus-box">
+    <img src="https://uniofeduford.netlify.app/images/london.png">
+    <img src="https://uniofeduford.netlify.app/images/newyork.png">
+    <img src="https://uniofeduford.netlify.app/images/washington.png">
+  </div>
+</section>
+
+<section>
+  <h2 class="title">Our Facilities</h2><br><br>
+  <div class="facility-box">
+    <div class="facility"><img src="https://uniofeduford.netlify.app/images/library.png"><br><h4>World Class Library</h4><br><p>Unlocking Wisdom, Empowering Dreams: Our Library, Your Gateway to Excellence!
+</p></div>
+    <div class="facility"><img src="https://uniofeduford.netlify.app/images/basketball.png"><br>
+        <h4>Largest Play Ground</h4><br><p>Where Boundless Energy Meets Infinite Possibilities: Play, Thrive, Succeed!</p>
+    </div>
+    <div class="facility"><img src="https://uniofeduford.netlify.app/images/cafeteria.png"><br><h4>Tasty and Healthy Food
+</h4><br><p>Fuel Your Journey with Goodness: Healthy Choices, Happy Tummies!</p></div>
+  </div>
+</section>
+
+<section>
+  <h2 class="title">What Our Students Say</h2><br><br>
+  <div class="test-box">
+    <div class="test">
+      <img src="https://uniofeduford.netlify.app/images/user1.jpg">
+      <p>Eduford is a great place to learn and grow.</p>
+    </div>
+    <div class="test">
+      <img src="https://uniofeduford.netlify.app/images/user2.jpg">
+      <p>The campus life and education are amazing.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+function toggleMenu(){
+  let menu = document.getElementById("menu");
+  if(menu.style.display=="block"){
+    menu.style.display="none";
+  }else{
+    menu.style.display="block";
+  }
+}
+</script>
+
+</body>
+</html>
